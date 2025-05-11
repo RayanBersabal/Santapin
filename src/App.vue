@@ -1,15 +1,23 @@
-<script setup>
-
-</script>
-
 <template>
-
+  <div class="text-[#814C3C] min-h-screen flex flex-col">
+    <Navbar />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+    <Footer />
+  </div>
 </template>
 
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+<script setup>
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+</script>
 
-body {
-  font-family: 'Poppins', sans-serif;
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>
