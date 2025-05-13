@@ -1,22 +1,25 @@
 <template>
   <main class="w-full">
-    <section class="bg-[#888888] py-12 md:py-20 min-h-[50vh] flex justify-center items-center">
-      <div class="text-left px-6 md:px-12 max-w-2xl">
-        <h1 class="text-white font-extrabold text-3xl md:text-5xl mb-4 leading-tight transform transition-transform duration-500 hover:scale-105">
-          Seperti rasa yang pernah ada
-        </h1>
-        <p class="text-white text-sm md:text-base mb-6 leading-relaxed max-w-md opacity-0 animate-fade-in delay-100">
-          Nikmati hidangan autentik Indonesia yang dibuat dengan cinta<br />
-          dan bahan-bahan berkualitas terbaik.
-        </p>
-        <router-link
-          to="/menu"
-          class="bg-[#814C3C] text-white text-sm md:text-base font-semibold rounded px-5 py-3 hover:bg-[#814C3C] transition duration-300 hover:scale-105"
-        >
-          Lihat Menu
-        </router-link>
+    <section class="bg-[#888888] pt-[64px] md:py-20 min-h-[50vh] flex items-center">
+      <div class="w-full max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div class="text-left max-w-2xl px-4 md:px-0">
+          <h1 class="md:whitespace-nowrap text-white font-extrabold text-3xl md:text-5xl mb-4 leading-tight transform transition-transform duration-500 hover:scale-105">
+            Seperti rasa yang pernah ada
+          </h1>
+          <p class="text-white text-sm md:text-base mb-6 leading-relaxed max-w-md opacity-0 animate-fade-in delay-100">
+            Nikmati hidangan autentik Indonesia yang dibuat dengan cinta<br />
+            dan bahan-bahan berkualitas terbaik.
+          </p>
+          <router-link
+            to="/menu"
+            class="bg-[#814C3C] text-white text-sm md:text-base font-semibold rounded px-5 py-3 hover:bg-[#3D5943] transition duration-300"
+          >
+            Lihat Menu
+          </router-link>
+        </div>
       </div>
     </section>
+
 
     <section class="bg-[#E6D5C4] px-6 py-6 md:py-8 text-center rounded-none">
       <div class="max-w-6xl mx-auto">
