@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Home           from '../view/Home.vue';
-import Menu           from '../view/Menu.vue';
-import Orders         from '../view/Orders.vue';
-import Login          from '../view/Login.vue';
-import Register       from '../view/Register.vue';
-import Cart           from '../view/Cart.vue';
-import Checkout       from '../view/Checkout.vue';
-import AdminDashboard from '../view/AdminDashboard.vue';
+import Home           from '../views/Home.vue';
+import Menu           from '../views/Menu.vue';
+import Orders         from '../views/Orders.vue';
+import Login          from '../views/Login.vue';
+import Register       from '../views/Register.vue';
+import Cart           from '../views/Cart.vue';
+import Checkout       from '../views/Checkout.vue';
+import AdminDashboard from '../views/AdminDashboard.vue';
 
 const routes = [
   { path: '/',         name: 'Home',           component: Home },
