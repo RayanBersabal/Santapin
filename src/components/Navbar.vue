@@ -6,7 +6,7 @@ const isMenuOpen = ref(false)
 
 <template>
   <nav class=" flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
-    <div class="text-2xl font-bold text-primary">
+    <div class="text-2xl font-bold transition-transform duration-500 hover:text-[#3D5943] hover:scale-105">
         <RouterLink 
         @click="isMenuOpen = false"
         to="/" class="nav-link" active-class="text-primary font-semibold">Santapin</RouterLink>
@@ -16,12 +16,24 @@ const isMenuOpen = ref(false)
     <div class="hidden md:flex items-center space-x-6">
       <ul class="flex space-x-6">
         <li><RouterLink to="/" class="nav-link" active-class="text-primary font-semibold">Home</RouterLink></li>
-        <li><RouterLink to="/menu" class="nav-link" active-class="text-primary font-semibold">Menu</RouterLink></li>
+        <!-- Dropdown Filter List -->
+        <li class="relative group">
+          <RouterLink to="/menu" class="nav-link" active-class="text-primary font-semibold">
+            Menu
+          </RouterLink>
+          <ul class="absolute left-1/2 -translate-x-1/2 mt-2 w-30 bg-white shadow-md rounded-md opacity-0 
+                     invisible group-hover:opacity-100 group-hover:visible group-hover:delay-200 transition 
+                     duration-300 space-y-2 z-50 text-center">
+            <li><RouterLink to="/menu" class="block px-4 py-2 hover:bg-gray-100">Semua</RouterLink></li>
+            <li><RouterLink to="/menu?filter=makanan" class="block px-4 py-2 hover:bg-gray-100 rounded-md">Makanan</RouterLink></li>
+            <li><RouterLink to="/menu?filter=minuman" class="block px-4 py-2 hover:bg-gray-100 rounded-md">Minuman</RouterLink></li>
+          </ul>
+        </li>
         <li><RouterLink to="/orders" class="nav-link" active-class="text-primary font-semibold">Orders</RouterLink></li>
         <li><RouterLink to="/cart" class="nav-link" active-class="text-primary font-semibold">Cart</RouterLink></li>
       </ul>
       <!-- Tombol Login -->
-      <RouterLink to="/login" class="bg-[#814C3C] text-white text-sm font-semibold rounded px-4 py-1.5 hover:bg-[#814C3C] transition">
+      <RouterLink to="/login" class="bg-[#814C3C] text-white text-sm font-semibold rounded px-4 py-1.5 duration-500 hover:bg-[#3D5943]">
         Login
       </RouterLink>
     </div>
