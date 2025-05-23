@@ -14,7 +14,7 @@
           <p class="text-white text-sm md:text-base mb-6 leading-relaxed max-w-md opacity-0 animate-fade-in delay-100">
             Nikmati hidangan autentik Indonesia yang dibuat dengan cinta dan bahan-bahan berkualitas terbaik.
           </p>
-          <div class="transform origin-center duration-500 hover:scale-102">
+          <div>
           <router-link
             to="/menu"
             class="bg-[#814C3C] text-white text-sm md:text-base font-semibold rounded px-5 py-3 hover:bg-[#3D5943] transition duration-300"
