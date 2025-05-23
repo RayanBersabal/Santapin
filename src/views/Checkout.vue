@@ -10,11 +10,10 @@ const ordersStore = useOrdersStore()
 const router = useRouter()     
 
 const goBack = () => {
-  // If history state has a back entry
   if (window.history.length > 1) {
     router.back()
   } else {
-    router.push('/orders') // fallback to a safe route
+    router.push('/orders')
   }
 }
 
@@ -34,6 +33,7 @@ const form = ref({
 // Options
 const paymentOptions = [
   { value: 'cash', label: 'Bayar di Tempat' },
+  { value: 'digital-wallet', label: 'Dompet Digital' },
   { value: 'transfer', label: 'Transfer Bank' }
 ]
 
@@ -66,7 +66,7 @@ const validateAndSubmit = () => {
     biayaAdmin,
     total: cart.cartTotal + ongkir + biayaAdmin,
     createdAt: new Date().toISOString(),
-    status: 'Disiapkan'
+    status: 'Dipesan'
   }
 
   ordersStore.addOrder(orderData)
@@ -92,7 +92,7 @@ const validateAndSubmit = () => {
 
     <div class="bg-gray-100 min-h-screen py-5">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- LEFT: Form & Payment -->
+            <!-- Form & Payment -->
             <div class="lg:col-span-2 space-y-8">
                 <!-- Detail Pesanan -->
                 <div>
@@ -154,7 +154,7 @@ const validateAndSubmit = () => {
                             : 'border-gray-300'
                         ]"
                     >
-                    <!-- Custom Radio Circle -->
+                    <!-- Radio Circle -->
                     <div class="h-5 w-5 rounded-full border-2 border-gray-400 flex items-center justify-center">
                         <div
                             v-if="form.tipePembayaran === option.value"
@@ -173,7 +173,7 @@ const validateAndSubmit = () => {
                 </div>
             </div>
 
-            <!-- RIGHT: Ringkasan Pesanan -->
+            <!-- Ringkasan Pesanan -->
             <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm h-fit">
                 <h3 class="text-xl font-semibold mb-4">Ringkasan Pesanan</h3>
                 <ul class="mb-1 space-y-1">
