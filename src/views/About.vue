@@ -69,43 +69,43 @@ export default {
         {
           name: 'Egidius Dicky Narendra Baas',
           role: 'Team Leader',
-          image: '/images/contributors/dicky.jpg',
+          image: 'https://avatars.githubusercontent.com/u/162414603?v=4',
           github: 'https://github.com/egidiusdicky',
         },
         {
           name: 'Rayan',
           role: 'Frontend Developer',
-          image: '/images/contributors/rayan.jpg',
+          image: 'https://avatars.githubusercontent.com/u/87006289?v=4',
           github: 'https://github.com/rayanbersabal',
         },
         {
           name: 'Garda Fitrananda',
           role: 'Frontend Developer',
-          image: '/images/contributors/garda.jpg',
+          image: 'https://avatars.githubusercontent.com/u/202229964?v=4',
           github: 'https://github.com/gardafitrananda',
         },
         {
           name: 'Sauzana',
           role: 'Frontend Developer',
-          image: '/images/contributors/sasa.jpg',
+          image: 'https://avatars.githubusercontent.com/u/202231744?v=4',
           github: 'https://github.com/Sauzana1919',
         },
         {
           name: 'Sandi Setiawan',
           role: 'Frontend Developer',
-          image: '/images/contributors/sandi.jpg',
+          image: 'https://avatars.githubusercontent.com/u/193219383?v=4',
           github: 'https://github.com/SandiSetiawann',
         },
         {
           name: 'Fahrudiansyah',
           role: 'Frontend Developer',
-          image: '/images/contributors/fahru.jpg',
+          image: 'https://avatars.githubusercontent.com/u/202230345?v=4',
           github: 'https://github.com/Fahrudiyansah',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>
