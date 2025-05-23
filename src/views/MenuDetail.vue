@@ -22,17 +22,15 @@ const menuId = Number(route.params.id)
 const menu = computed(() => menuStore.getItemById(menuId))
 
 const goBack = () => {
-  // If history state has a back entry
   if (window.history.length > 1) {
     router.back()
   } else {
-    router.push('/orders') // fallback to a safe route
+    router.push('/orders')
   }
 }
 
 const addToCart = () => {
   if (menu.value) {
-    // Pass the item with quantity to cart store
     console.log('Adding to cart:', menu.value.name, 'Quantity:', quantity.value, 'Type of quantity:', typeof quantity.value)
     const itemToAdd = {
       id: menu.value.id,
@@ -60,7 +58,7 @@ const decreaseQty = () => {
   if (quantity.value > 1) quantity.value--
 }
 
-// Dummy reviews (you can connect to a real source later)
+// Dummy reviews
 const reviews = [
   { name: 'Sarah K.', stars: 5, date: '2 days ago', text: 'Absolutely delicious! The flavors were perfectly balanced.' },
   { name: 'Michael R.', stars: 4, date: '1 week ago', text: 'Very tasty and generous portion. Would order again.' },
@@ -126,7 +124,7 @@ const reviews = [
       </main>
     </div>
 
-    <!-- If not found -->
+    <!-- Menu not found -->
     <div v-else class="text-center py-20 text-gray-500">
       <p>Menu tidak ditemukan.</p>
     </div>
