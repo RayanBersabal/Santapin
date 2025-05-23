@@ -20,6 +20,7 @@ import Checkout       from '../views/Checkout.vue';
 import OrdersTracking from '../views/OrdersTracking.vue';
 import Receipt        from '../views/Receipt.vue';
 import MenuDetail     from '../views/MenuDetail.vue';
+import About          from '../views/About.vue'
 
 const routes = [
   { path: '/',                    name: 'Home',           component: Home },
@@ -33,6 +34,7 @@ const routes = [
   { path: '/receipt',             name: 'Receipt',        component: Receipt },
   { path: '/menu/:id',            name: 'MenuDetail',     component: MenuDetail },
   { path: '/admin-login',         name: 'AdminLogin',     component: AdminLogin },
+  { path: '/about',               name: 'About',          component: About },
 
   {
     path: '/admin',
@@ -55,7 +57,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const isAdminLoggedIn = localStorage.getItem('isAdminLoggedIn') === 'true'
 
-  // Only protect routes that start with '/admin' AND are not '/admin-login'
+  // protect routes that start with '/admin' AND are not '/admin-login'
   if (to.path.startsWith('/admin') && to.path !== '/admin-login') {
     if (isAdminLoggedIn) {
       next()
