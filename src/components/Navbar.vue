@@ -21,13 +21,13 @@ const isMenuOpen = ref(false)
           <RouterLink to="/menu" class="nav-link" active-class="text-primary font-semibold">
             Menu
           </RouterLink>
-          <ul class="absolute left-1/2 -translate-x-1/2 mt-2 w-30 bg-white shadow-md rounded-md opacity-0 
+          <!-- <ul class="absolute left-1/2 -translate-x-1/2 mt-2 w-30 bg-white shadow-md rounded-md opacity-0 
                      invisible group-hover:opacity-100 group-hover:visible group-hover:delay-200 transition 
                      duration-300 space-y-2 z-50 text-center">
             <li><RouterLink to="/menu" class="block px-4 py-2 hover:bg-gray-100">Semua</RouterLink></li>
             <li><RouterLink to="/menu" class="block px-4 py-2 hover:bg-gray-100 rounded-md">Makanan</RouterLink></li>
             <li><RouterLink to="/menu" class="block px-4 py-2 hover:bg-gray-100 rounded-md">Minuman</RouterLink></li>
-          </ul>
+          </ul> -->
         </li>
         <li><RouterLink to="/orders" class="nav-link" active-class="text-primary font-semibold">Pesanan</RouterLink></li>
         <li><RouterLink to="/cart" class="nav-link" active-class="text-primary font-semibold">Keranjang</RouterLink></li>
