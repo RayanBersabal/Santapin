@@ -13,6 +13,7 @@ const noLayoutRoutes = [
   '/checkout',
   '/orders-tracking',
   '/receipt',
+  '/about'
 ]
 
 // Mengecek apakah route = /isLayoutHidden
